@@ -1,0 +1,25 @@
+[performance ~7 min?]
+
+Hello all.
+
+Differently from many of you here I do not see myself as an artist, nor do I see myself as a musician; rather, if there's anything I am somewhat okay to be defined as is a writer. The thing is, I hold no special love for traditional formats in which writing is generally shown: to this day, the literary novel is still pretty much the aim of every "serious" writer. Don't get me wrong: I have nothing against novels per se and believe many, new and old, are extremely valuable and relevant pieces; I just don't think they are the only legitimate way of using the written word. I mean, there are twitter threads, video games and graphic novels that are on par with some pretty good books, in my opinion.
+
+The reason I am going on and on about writing in a workshop mainly focussed on sound is that most of my practice consists of both trying to transform words in other things and searching for ways to make things transform my words. This…thing you just saw was one of the tools I created to do both things: on one hand, each letter, space and punctuation mark is transformed into a sound; on the other, the sounds are of course influencing the way that I write: for example, I really like this sound [types something], so I might make a whole piece in which I try to insert this specific words as much as possible. That might sound silly, but it's in my opinion as good strategy as any at exploring different venues and paths than I would if I had just been silently writing the same stuff I usually write. 
+
+CAConrad, a brilliant american queer poet which has lectured here at the sandberg a few times, creates rituals for writing his stuff: eat some dirt, hold a potent crystal in your hand and run until you are almost passing out, then write a poem, for instance. They, which is CAConrad's prefered pronoun, believe, to put it rather roughly, in changing one's body and conditions to create different work, to extend one's reach beyond the commonplace and cliched. In my case, I do that by having the computer transform my input into something else, almost as a partner of sorts. The sounds you heard were programmed by me, yes, but much of it is actually reliant on the machine and its limitations: for example, the musical notes created by this tool depend on the codes machines attribute to keyboard keys and the sounds themselves vary between browsers. I am also using one the worst languages possible, javascript, to do sound stuff, as I imagine jan-kees is thinking, but that's both using the language that I am the fastest with and embracing the flaws and idiosyncrasies of my partner.
+
+The tools is actually pretty simple and largely depends on one library called Tone.js. For those who are not that into programming, a library is basically a package of code; we don't necessarily need to use it, but in this case it takes care of all the actual sound synthesis and leaves us free to focus on what we actually want to do. After we load the library, we ask the browser for a reference to the input element where we are writing, marked by the <textarea> tag. We then ask the browser to run this piece of code that I have named playAudio every time someone presses a key inside the textarea element.
+
+There are more things happening here, but the main logic of the tool is:
+1. it gets the code of the key that was pressed. This is a number between 0 and I think around 200. Backspace is 8, a is 67, etc;
+2. it creates a sound wave with some predefined settings and with a frequency equal to that of the key that was pressed.
+
+So, if, say, for the computer the letter A is 65, it plays a sound wave of 65Hz, if B is 66 it plays a sound wave of 66 and so on. And that's pretty much the whole logic of this application.
+
+Of course, that's a bit dull and I had specific wishes on how I wanted this to sound. For instance, I wanted the sounds to last a considerable amount of time so I can think of a word to write, so I set the duration of the note here to 10 seconds. I also don't always want sine waves because they can be a bit repetitive, so here I created a list of the types of sound waves I wanted to use. Also, I wanted to have some distortion, so whenever I press the command button on my mac everything will sound all rough, a bit like a guitar pedal. And finally, I was playing around with the tool and by accident made the phaser make these weird sounds that remind me of these monsters in a game I was playing, so I decided to leave it there.
+
+Of course, all the code is available on github and you are free to use or modify as you see fit.
+
+
+
+[questions]

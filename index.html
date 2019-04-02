@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Audio tool</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="main.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+      }
+
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+      }
+
+      textarea {
+        width: 100%;
+        height: 100%;
+        background: black;
+        color: white;
+        font-size: 5vh;
+        padding: 1vw;
+        outline: none;
+        -webkit-appearance: none;
+        box-sizing: border-box;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <textarea data-audio-type></textarea>
+    <script type="text/javascript" src="Tone.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>
